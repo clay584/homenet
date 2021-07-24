@@ -1,26 +1,13 @@
 #!/usr/bin/env python3
-from nornir import InitNornir
-from nornir_scrapli.tasks import get_prompt, send_command, send_configs
-from config import USERNAME, PASSWORD
+from config import inventory
+from scrapli.driver.core import IOSXEDriver
+import json
 
 
-nr = InitNornir(config_file="nornir_data/config.yml")
+dev = inventory.get("sandbox-iosxe-latest-1.cisco.com")
 
-# Assign username and password to nornir inventory hosts
-for host in nr.inventory.hosts.values():
-    host.username = USERNAME
-    host.password = PASSWORD
-
-prompt_results = nr.run(task=get_prompt)
-command_results = nr.run(task=send_command, command="show version")
-config_results = nr.run(
-    task=send_configs,
-    configs=["interface loopback123", "description nornir_scrapli was here"],
-)
-
-print("get_prompt result:")
-print(prompt_results["iosxe-1"].result)
-print("send_command result:")
-print(command_results["iosxe-1"].result)
-print("send_configs result:")
-print(config_results["iosxe-1"].result)
+conn = IOSXEDriver(**dev)
+conn.open()
+response = conn.send_command("show version")
+# print(response.result)
+print(json.dumps(response.genie_parse_output(), sort_keys=True, indent=4))
