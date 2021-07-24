@@ -1,0 +1,25 @@
+---
+
+vlans:
+  - name: Management_IPv4
+    id: 100
+  - name: DMZ_IPv4
+    id: 101
+  - name: DMZ_IPv6
+    id: 102
+  - name: DMZ_Dual_Stack
+    id: 103
+  - name: Client_IPv4
+    id: 104
+  - name: Client_IPv6
+    id: 105
+  - name: Client_Dual_Stack
+    id: 106
+  - name: Guest_IPv4
+    id: 107
+  - name: IoT_Devices_IPv4
+    id: 108
+  - name: Reserved1
+    id: 109
+  - name: Reserved2
+    id: 110

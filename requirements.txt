@@ -2,3 +2,4 @@ scrapli
 ruamel.yaml
 pyats
 genie
+diagrams

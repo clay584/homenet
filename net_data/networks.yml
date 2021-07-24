@@ -1,0 +1,52 @@
+---
+
+networks:
+  - name: Management_IPv4
+    networks:
+      ipv4:
+        network: 192.168.0.0/24
+        vlan_id: 100
+  - name: DMZ_IPv4
+    network: 192.168.1.0/24
+    vlan_id: 101
+  - name: DMZ_IPv6
+    networks:
+      ipv6:
+        network: 2001:470:d9f7:2::/64
+        vlan_id: 102
+  - name: DMZ_Dual_Stack
+    networks:
+      ipv4:
+        network: 192.168.3.0/24
+        vlan_id: 103
+      ipv6:
+        network: 2001:470:d9f7:3::/64
+        vlan_id: 103
+  - name: Client_IPv4
+    networks:
+      ipv4:
+        network: 192.168.4.0/24
+        vlan_id: 104
+  - name: Client_IPv6
+    networks:
+      ipv6:
+        network: 2001:470:d9f7:5::/64
+        vlan_id: 105
+  - name: Client_Dual_Stack
+    networks:
+      ipv4:
+        network: 192.168.6.0/24
+        vlan_id: 106
+      ipv6:
+        network: 2001:470:d9f7:6::/64
+        vlan_id: 106
+  - name: Guest_IPv4
+    networks:
+    ipv4:
+      network: 192.168.7.0/24
+      vlan_id: 107
+  - name: IoT_Devices_IPv4
+    networks:
+      ipv4:
+        network: 192.168.8.0/24
+        vlan_id: 108
