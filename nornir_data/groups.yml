@@ -1,0 +1,4 @@
+---
+global:
+  data:
+    domain: acme.local
