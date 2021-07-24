@@ -18,7 +18,7 @@ response = rtr_conn.send_command("show version")
 print(json.dumps(response.genie_parse_output(), sort_keys=True, indent=4))
 
 # Linux Server
-linux_server = inventory.get("viper.operational.io")
+linux_server = inventory.get("some.linux.server")
 linux_conn = GenericDriver(**linux_server)
 linux_conn.open()
 print(linux_conn.send_command("uname -a").result)
