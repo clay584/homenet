@@ -1,0 +1,58 @@
+---
+
+devices:
+  palo-fw:
+    hostname: palo-fw
+    vendor: Palo Alto Networks
+    model: PA-220
+    os: panos
+  edge:
+    hostname: edge
+    vendor: Ubiquiti
+    model: edgerouter-x
+    os: edgerouter
+  fios-ont:
+    hostname: fios-ont
+    vendor: Frontier FiOS
+    model: fios-ont
+    os: generic
+  core-rtr:
+    hostname: core-rtr
+    vendor: Cisco
+    model: C1111-8PW
+    os: iosxe
+  tp-oob-sw:
+    hostname: tp-oob-sw
+    vendor: TP Link
+    model: TP-5-1G
+    os: generic
+  tp-office-sw:
+    hostname: tp-office-sw
+    vendor: TP Link
+    model: TP-5-1G
+    os: generic
+  core-sw:
+    hostname: core-sw
+    vendor: Netgear
+    model: NG-8-1G-4POE
+    os: generic
+  moca-br-1:
+    hostname: moca-br-1
+    vendor: ActionTec
+    model: MOCA-BR
+    os: generic
+  moca-br-2:
+    hostname: moca-br-2
+    vendor: ActionTec
+    model: MOCA-BR
+    os: generic
+  wap-1:
+    hostname: wap-1
+    vendor: Ubiquiti
+    model: WAP
+    os: generic
+  wap-2:
+    hostname: wap-2
+    vendor: Ubiquiti
+    model: WAP
+    os: generic
