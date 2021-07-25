@@ -1,0 +1,11 @@
+---
+
+zones:
+  client_zone:
+    name: "Client Zone"
+  dmz_zone:
+    name: "DMZ Zone"
+  iot_zone:
+    name: "IoT Zone"
+  guest_zone:
+    name: "Guest Zone"

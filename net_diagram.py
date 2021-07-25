@@ -30,30 +30,25 @@ with Diagram("Logical Topology", show=False):
         nd.devices.edge.hostname,
         f"{ICONPATH}/ubiquiti.png",
     )
-
     core_rtr = Custom(nd.devices.core_rtr.hostname, f"{ICONPATH}/sq_router.png")
-    # sw1 = Custom(
-    #     nd.get("devices").get("core-sw").get("hostname"),
-    #     "resources/enterprise/network/sq_switch_blue.png",
-    # )
 
     # Zones and VRFs
     with Cluster("Core Router VRFs"):
-        with Cluster("Client Zone"):
-            vrf104 = Custom("Client_IPv4", f"{ICONPATH}/c_vrf.png")
-            vrf105 = Custom("Client_IPv6", f"{ICONPATH}/c_vrf.png")
-            vrf106 = Custom("Client_Dual_Stack", f"{ICONPATH}/c_vrf.png")
+        with Cluster(nd.zones.client_zone.name):
+            vrf104 = Custom(nd.vrfs.vrf104.name, f"{ICONPATH}/c_vrf.png")
+            vrf105 = Custom(nd.vrfs.vrf105.name, f"{ICONPATH}/c_vrf.png")
+            vrf106 = Custom(nd.vrfs.vrf106.name, f"{ICONPATH}/c_vrf.png")
 
-        with Cluster("DMZ Zone"):
-            vrf101 = Custom("DMZ_IPv4", f"{ICONPATH}/c_vrf.png")
-            vrf102 = Custom("DMZ_IPv6", f"{ICONPATH}/c_vrf.png")
-            vrf103 = Custom("DMZ_Dual_Stack", f"{ICONPATH}/c_vrf.png")
+        with Cluster(nd.zones.dmz_zone.name):
+            vrf101 = Custom(nd.vrfs.vrf101.name, f"{ICONPATH}/c_vrf.png")
+            vrf102 = Custom(nd.vrfs.vrf102.name, f"{ICONPATH}/c_vrf.png")
+            vrf103 = Custom(nd.vrfs.vrf103.name, f"{ICONPATH}/c_vrf.png")
 
-        with Cluster("IoT Zone"):
-            vrf107 = Custom("IoT_Devices_IPv4", f"{ICONPATH}/c_vrf.png")
+        with Cluster(nd.zones.iot_zone.name):
+            vrf107 = Custom(nd.vrfs.vrf107.name, f"{ICONPATH}/c_vrf.png")
 
-        with Cluster("Guest Zone"):
-            vrf108 = Custom("Guest_IPv4", f"{ICONPATH}/c_vrf.png")
+        with Cluster(nd.zones.guest_zone.name):
+            vrf108 = Custom(nd.vrfs.vrf108.name, f"{ICONPATH}/c_vrf.png")
 
     # Lines
     red_dashed_line = Edge(color="red", style="dashed", label="6in4 Tunnel")

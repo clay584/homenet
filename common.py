@@ -19,4 +19,7 @@ def load_network_data():
     with open("net_data/vrfs.yml", "r") as f:
         vrfs = YAML().load(f)
         data["vrfs"] = vrfs.get("vrfs")
+    with open("net_data/zones.yml", "r") as f:
+        zones = YAML().load(f)
+        data["zones"] = zones.get("zones")
     return Box(data)

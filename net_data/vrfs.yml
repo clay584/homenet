@@ -1,21 +1,30 @@
 ---
 
 vrfs:
-  Management_IPv4:
+  vrf100:
+    name: Management_IPv4
     rd: "100:100"
-  DMZ_IPv4:
+  vrf101:
+    name: DMZ_IPv4
     rd: "101:101"
-  DMZ_IPv6:
+  vrf102:
+    name: DMZ_IPv6
     rd: "102:102"
-  DMZ_Dual_Stack:
+  vrf103:
+    name: DMZ_Dual_Stack
     rd: "103:103"
-  Client_IPv4:
+  vrf104:
+    name: Client_IPv4
     rd: "104:104"
-  Client_IPv6:
+  vrf105:
+    name: Client_IPv6
     rd: "105:105"
-  Client_Dual_Stack:
+  vrf106:
+    name: Client_Dual_Stack
     rd: "106:106"
-  Guest_IPv4:
+  vrf107:
+    name: Guest_IPv4
     rd: "107:107"
-  IoT_Devices_IPv4:
+  vrf108:
+    name: IoT_Devices_IPv4
     rd: "108:108"
