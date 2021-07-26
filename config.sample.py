@@ -1,3 +1,8 @@
+# Netbox Info
+NB_HOST = "http://localhost:8080"
+NB_TOKEN = "some_api_token"
+
+
 USERNAME = "foo"
 PASSWORD = r"bar"
 

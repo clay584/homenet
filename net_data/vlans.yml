@@ -19,7 +19,3 @@ vlans:
     id: 107
   - name: IoT_Devices_IPv4
     id: 108
-  - name: Reserved1
-    id: 109
-  - name: Reserved2
-    id: 110
